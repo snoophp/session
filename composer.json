@@ -1,0 +1,30 @@
+{
+    "name": "snoophp/session",
+	"description": "A simple PHP library to handle user session",
+	"keywords": [
+		"session",
+		"snoophp",
+		"sneppy"
+	],
+    "type": "library",
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"support": {
+		"issues": "https://github.com/snoophp/session/issues",
+        "source": "https://github.com/snoophp/session"
+	},
+    "authors": [
+        {
+            "name": "Sneppy",
+            "email": "andrea.mecchia@mail.polimi.it"
+        }
+    ],
+    "require": {
+		"php": ">7.0"
+	},
+	"autoload": {
+        "psr-4": {
+            "SnooPHP\\": "src/SnooPHP/"
+        }
+    }
+}
