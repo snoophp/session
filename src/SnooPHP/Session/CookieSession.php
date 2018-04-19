@@ -60,7 +60,7 @@ class CookieSession extends Session
 	 * 
 	 * @return bool false if fails to set some cookies
 	 */
-	public static function create($user, $token, $stayLogged = false)
+	public static function createSession($user, $token, $stayLogged = false)
 	{
 		/* @todo use field map */
 
@@ -91,7 +91,7 @@ class CookieSession extends Session
 	/**
 	 * Refresh session
 	 */
-	public static function refresh()
+	public static function refreshSession()
 	{
 		// Refresh using session time
 		$expiration = time() + $_COOKIE["session_time"];
@@ -105,7 +105,7 @@ class CookieSession extends Session
 	/**
 	 * Destroy session
 	 */
-	public static function destroy()
+	public static function destroySession()
 	{
 		unset($_COOKIE["session_id"]);		setcookie("session_id", "null", 1, "/");
 		unset($_COOKIE["session_user"]);	setcookie("session_user", "null", 1, "/");
